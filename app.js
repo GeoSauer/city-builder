@@ -1,13 +1,13 @@
 const nameInput = document.getElementById('name-input');
 const biomeSelect = document.getElementById('biome-select');
 const castleSelect = document.getElementById('castle-select');
-const addAttraction = document.getElementById('add-attraction');
 const attractionInput = document.getElementById('attraction-input');
 const kingdomArticle = document.getElementById('kingdom-article');
 const kingdomDisplay = document.getElementById('kingdom-display');
 const biomeImage = document.getElementById('biome-image');
 const castleImage = document.getElementById('castle-image');
-const addButton = document.getAnimations('add-button');
+const addButton = document.getElementById('add-button');
+const attractionList = document.getElementById('attraction-list');
 
 const kingdom = {
     name: 'Neogeo',
@@ -16,7 +16,6 @@ const kingdom = {
     attractions: [],
 };
 
-/* Events */
 nameInput.addEventListener('input', () => {
     kingdom.name = nameInput.value;
     displayKingdom();
@@ -31,7 +30,19 @@ castleSelect.addEventListener('change', () => {
     kingdom.castle = castleSelect.value;
     displayKingdom();
 });
-/* Display Functions */
+
+addButton.addEventListener('click', () => {
+    if (!attractionInput.value) {
+        return;
+    } else {
+        const attraction = attractionInput.value;
+        kingdom.attractions.push(attraction);
+        displayAttractions();
+
+        attractionInput.value = '';
+    }
+});
+
 function displayBuilder() {
     nameInput.value = kingdom.name;
     biomeSelect.value = kingdom.biome;
@@ -48,6 +59,17 @@ function displayKingdom() {
     castleImage.alt = kingdom.castle;
 }
 
+function displayAttractions() {
+    attractionList.innerHTML = '';
+
+    for (const attraction of kingdom.attractions) {
+        const li = document.createElement('li');
+        li.textContent = attraction;
+        attractionList.append(li);
+    }
+}
+
 // (don't forget to call any display functions you want to run on page load!)
 displayBuilder();
 displayKingdom();
+displayAttractions();

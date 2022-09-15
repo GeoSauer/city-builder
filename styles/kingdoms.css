@@ -43,6 +43,11 @@ article {
     height: 100%;
 }
 
+.attractions {
+    display: grid;
+    grid-auto-flow: row;
+}
+
 .forest {
     background: rgb(11, 97, 11);
     color: rgb(191, 210, 205);
