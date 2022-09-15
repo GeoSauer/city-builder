@@ -14,6 +14,12 @@
         <script type="module" src="app.js"></script>
 
         <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Aboreto&family=Dancing+Script:wght@400;700&family=Edu+QLD+Beginner:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
         <!-- see https://fonts.google.com/ -->
 
         <!-- css -->
@@ -26,10 +32,53 @@
 
     <body>
         <header>
-            <img class="logo" src="assets/html_css_js.png" alt="logo" />
-            <h1>Web App</h1>
+            <img class="logo" src="assets/dragon.jpeg" alt="dragon" />
+            <h1>Build Your Own Fantasy Kingdom!</h1>
         </header>
 
-        <main></main>
+        <main>
+            <section class="builder">
+                <label>
+                    My Kingdom shall be named:
+                    <input id="name-input" value="Neogeo" />
+                </label>
+
+                <label>
+                    It resides in this biome:
+                    <select id="biome-select">
+                        <option value="forest">Forest</option>
+                        <option value="desert">Desert</option>
+                        <option value="volcano">Volcano</option>
+                        <option value="underwater">Underwater</option>
+                    </select>
+                </label>
+
+                <label>
+                    And features this style of castle:
+                    <select id="castle-select">
+                        <option value="turkish">Turkish</option>
+                        <option value="scottish">Scottish</option>
+                        <option value="indian">Indian</option>
+                        <option value="colombian">Colombian</option>
+                    </select>
+                </label>
+
+                <label>
+                    People flock to it because it has:
+                    <div class="add-attraction">
+                        <input type="text" id="attraction-input" />
+                        <button>+</button>
+                    </div>
+                </label>
+            </section>
+
+            <article id="kingdom" class="forest indian">
+                <h1>Welcome, traveler, to <span id="kingdom-display">Neogeo</span>!</h1>
+                <div class="images">
+                    <img id="biome-image" src="assets/biomes/forest.jpeg" alt="forest" />
+                    <img id="castle-image" src="assets/castles/turkish.jpeg" alt="turkish castle" />
+                </div>
+            </article>
+        </main>
     </body>
 </html>
