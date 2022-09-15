@@ -1,0 +1,92 @@
+main {
+    display: grid;
+    grid-template-columns: 250px 400px;
+    gap: 30px;
+    align-items: start;
+}
+
+label {
+    display: grid;
+    margin-top: 15px;
+    gap: 3px;
+    font-size: 0.9em;
+}
+
+.add-attraction {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+input,
+select,
+button {
+    height: 25px;
+}
+
+article {
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+    width: 640px;
+    height: fit-content;
+    padding-bottom: 20px;
+}
+
+.images {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 200px;
+}
+
+.images img {
+    width: 100%;
+    height: 100%;
+}
+
+.attractions {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.forest {
+    background: rgb(11, 97, 11);
+    color: rgb(191, 210, 205);
+    border: rgb(79, 45, 45) 3px solid;
+}
+
+.desert {
+    background: rgb(147, 133, 122);
+    color: rgb(240, 197, 117);
+    border: rgb(245, 195, 245) 3px solid;
+}
+
+.volcano {
+    background: rgb(220, 79, 3);
+    color: rgb(238, 173, 52);
+    border: rgb(179, 9, 9) 3px solid;
+}
+
+.underwater {
+    background: rgb(17, 158, 158);
+    color: rgb(109, 58, 156);
+    border: rgb(33, 33, 143) 3px solid;
+}
+
+.turkish {
+    font-family: 'Aboreto', cursive;
+    font-weight: bold;
+}
+
+.scottish {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3em;
+}
+
+.indian {
+    font-family: 'Edu QLD Beginner', cursive;
+    font-size: 1.3em;
+}
+
+.colombian {
+    font-family: 'Space Mono', monospace;
+}
